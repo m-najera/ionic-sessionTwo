@@ -9,21 +9,9 @@
 <ion-content padding>
   <ion-item>
     <ion-label position="floating">User</ion-label>
-    <ion-input [(ngModel)]="login" type="text"></ion-input>
+    <ion-input (keyup.enter)="goToProfile(login)" [(ngModel)]="login" type="text"></ion-input>
   </ion-item>
-  <ion-button (click)="getUser(login);">
-    Get info
+  <ion-button (click)="goToProfile(login)">
+    Find User
   </ion-button>
-
-  <div *ngIf="user">
-    <ion-card>
-      <ion-card-header>
-        <ion-card-title>{{user.name}}</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        <ion-img [src]="user.avatar_url"></ion-img>
-        {{user.bio}}
-      </ion-card-content>
-    </ion-card>
-  </div>
 </ion-content>
