@@ -13,14 +13,10 @@ export class ProfilePage implements OnInit {
   http: any;
   login: string;
   constructor(
-    private _githubService: GithubService,
-    private _activatedRoute: ActivatedRoute
+    private _githubService: GithubService
   ) {}
 
   ngOnInit() {
-    // this.login = this._activatedRoute.snapshot.paramMap.get('login');
-  }
-  getUser() {
-    this.user = this._githubService.user();
+    this.user = this._githubService.user;
   }
 }

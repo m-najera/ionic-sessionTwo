@@ -10,7 +10,6 @@ export class ToastServiceService {
 
   make(param: string) {
     this._toast.show(param, '500', 'center');
-    console.log('HOLA');
   }
 
 }

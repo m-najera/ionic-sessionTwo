@@ -21,14 +21,13 @@ export class HomePage {
     private _toast: ToastServiceService
   ) {}
 
-  async goToProfile(param: string) {
+  goToProfile(param: string) {
     this._githubService.getUser(param).subscribe( (data) => {
-      this.user = data;
-      this._githubService.user = this.user;
+      this._githubService.user = data;
       this._navCtrl.navigateForward(`profile/${param}`);
     }, (err) => {
       console.log('ERROR');
-      this._toast.make(`User ${param} doesn't exist.`);
+      this._toast.make('User doesn\'t exist.');
     });
   }
 

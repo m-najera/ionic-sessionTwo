@@ -11,7 +11,7 @@ export class GithubService {
   private http: any;
 
   getUser(name: string): Observable<any> {
-    // return this._httpClient.get(`https://api.github.com/users/${name}`);
-    return this._httpClient.get(`https://reqres.in/api/users/${name}`);
+    return this._httpClient.get(`https://api.github.com/users/${name}`);
+    // return this._httpClient.get(`https://reqres.in/api/users/${name}`);
   }
 }

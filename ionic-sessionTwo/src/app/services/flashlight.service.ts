@@ -9,7 +9,7 @@ export class FlashlightService {
   constructor(
     private _flashlight: Flashlight) { }
 
-    toogle(){
+    toogle() {
       this._flashlight.toggle();
     }
 
