@@ -11,7 +11,10 @@
     <ion-label position="floating">User</ion-label>
     <ion-input (keyup.enter)="goToProfile(login)" [(ngModel)]="login" type="text"></ion-input>
   </ion-item>
-  <ion-button (click)="goToProfile(login)">
-    Find User
+  <ion-button expand="block" (click)="goToProfile(login)">
+    Find User <ion-icon name="search"></ion-icon>
+  </ion-button>
+  <ion-button (click)="toogleFlashlight()" color="dark" expand="block">
+    Flashligth <ion-icon name="flashlight"></ion-icon>
   </ion-button>
 </ion-content>

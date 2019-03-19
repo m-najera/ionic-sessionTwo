@@ -1,6 +1,7 @@
+import { FlashlightService } from './../services/flashlight.service';
 import { Component } from '@angular/core';
-import { GithubService } from '../services/github.service';
 import { NavController } from '@ionic/angular';
+
 
 @Component({
   selector: 'app-home',
@@ -11,9 +12,16 @@ export class HomePage {
   user: any;
   login: string;
 
-  constructor(private _github: GithubService, private _navCtrl: NavController) {}
+  constructor(
+    private _navCtrl: NavController,
+    private _light: FlashlightService
+  ) {}
 
-  goToProfile(param: string){
-    this._navCtrl.navigateForward(`profile/${param}`);  }
+  goToProfile(param: string) {
+    this._navCtrl.navigateForward(`profile/${param}`);
+  }
 
+  toogleFlashlight() {
+    this._light.toogle();
+  }
 }

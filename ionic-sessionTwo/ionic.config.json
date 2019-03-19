@@ -1,5 +1,7 @@
 {
   "name": "ionic-sessionTwo",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
